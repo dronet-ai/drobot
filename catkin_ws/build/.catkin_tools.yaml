@@ -1,0 +1,6 @@
+devel_space: /home/houssem-meg/submission/catkin_ws/devel
+install: false
+install_space: /home/houssem-meg/submission/catkin_ws/install
+profile: default
+source_space: /home/houssem-meg/submission/catkin_ws/src
+workspace: /home/houssem-meg/submission/catkin_ws

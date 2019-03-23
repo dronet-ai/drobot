@@ -1,0 +1,7 @@
+[  1%] Built target orb_slam2_ros_gencfg
+[ 12%] Built target DBoW2
+[ 58%] Built target g2o
+[ 86%] Built target orb_slam2_ros
+[ 95%] Built target orb_slam2_ros_mono
+[ 95%] Built target orb_slam2_ros_rgbd
+[100%] Built target orb_slam2_ros_stereo
