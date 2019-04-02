@@ -443,6 +443,10 @@ if __name__ == '__main__':
     gate_waypoints.insert(0,initial_pose[0:3])  
     
     gate_waypoints=reorder_waypoints(gate_waypoints)
+   
+   # del(gate_waypoints[10:18])
+   # print(gate_waypoints)
+    gate_waypoints=[[18.0, -23.0, 6.3], (17.251109999999997, 3.6314985, 6.306497500000001), (16.791805, 39.442245, 6.7624995), (16.791805-7, 39.442245, 6.7624995), (2.0891957999999997, 27.86797, 2.54649985), (2.1998320000000002, 9.001728, 1.99375), (-7.3086705, -12.13678, 3.229941), (-8.498042, -29.359895, 2.6425), (-0.00900054, -33.913, 2.1031115000000002),  (6.7508205, -29.32303, 2.56749995), (7.249821000000001, -11.79203, 2.54649985), (-10.228669499999999, 7.773225500000001, 2.0199409999999998),  (-10.048669, 30.623224999999998, 2.897941)]
     
     
     ### Initialize controller
@@ -490,9 +494,9 @@ if __name__ == '__main__':
         x_s,y_s,z_s,q1,q2,q3,q4=uav_groundtruth_pose(trans,fused_transform)
         #z = Position.z
         #Frame transformation between SLAM and ground truth 
-        x=x_s*cos(Y_i) + y_s*sin(Y_i) + initial_pose[0]  #18-y_s
-        y=-x_s*sin(Y_i) + y_s*cos(Y_i) + initial_pose[1]   #-23 +x_s
-        z= initial_pose[2] + z_s -1    #5.3 + z_s
+        x=gt.transform.translation.x  #18-y_s
+        y=gt.transform.translation.y
+        z= gt.transform.translation.z
         print(Y_i)
 	########### transform tf to euler frame
         

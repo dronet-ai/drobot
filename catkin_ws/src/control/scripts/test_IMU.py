@@ -10,7 +10,6 @@ import tf2_ros
 from sensor_msgs.msg import Imu
 from tf2_msgs.msg import TFMessage
 # Because of transformations
-import tf_conversions
 import geometry_msgs.msg
 
 

@@ -8,7 +8,6 @@
      
   <group ns="/control_nodes">
     <!-- Start human teleoperation nodes -->
-    <node name="joy" pkg="joy" type="joy_node"/>
     <node name="keyboard" pkg="keyboard" type="keyboard"/>
     <node name="universal_teleop" pkg="universal_teleop" type="universal_teleop" output="screen">
       <rosparam file="$(find universal_teleop)/launch/example_input_map.yml"/>
@@ -38,11 +37,26 @@
     <rosparam command="load" file="$(find flightgoggles)/config/challenges/challenge_final.yaml"/>  
   </group>
 
-<group ns="/Drobot"> 
-     <node name="test_IMU.py" pkg="control" type="test_IMU.py"/>
-     <node name="leaderboard" pkg="control" type="leaderbord_groundtruth_v3.py"/>
-    <node name="slam" pkg="orb_slam2_ros" type="orb_slam2_r200_stereo"/>
-  </group>
-</launch>
+ <group ns="/Drobot"> 
+       <node name="orb_slam2_stereo" pkg="orb_slam2_ros"
+      type="orb_slam2_ros_stereo" args="
+	  $(find orb_slam2_ros)/orb_slam2/Vocabulary/ORBvoc.txt
+	  $(find orb_slam2_ros)/orb_slam2/config/RealSenseR200Stereo.yaml"
+      output="screen">
+       <remap from="image_left/image_color_rect" to="/uav/camera/left/image_rect_color" />
+       <remap from="image_right/image_color_rect" to="/uav/camera/right/image_rect_color" />
+
+       <param name="publish_pointcloud" type="bool" value="true" />
+       <param name="pointcloud_frame_id" type="string" value="map" />
+       <param name="camera_frame_id" type="string" value="camera_link" />
+       </node>
+       <arg name="node_start_delay_one" default="2.0" />  
+       <node name="test_IMU" pkg="control" type="test_IMU.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay_one); $0 $@' " />
+       <arg name="node_start_delay" default="10.0" />  
+       <node name="leaderboard" pkg="control" output="screen" type="leaderbord_groundtruth_v3.py" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " /> 
+   </group>
+ </launch>
+
+
 
 
