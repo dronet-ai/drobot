@@ -3,6 +3,7 @@
 **Authors:** [Zeryab Moussaoui](https://fr.linkedin.com/in/zeryab-moussaoui-9a728029), [Yacine Ben Ameur]( https://www.linkedin.com/in/yacine-ben-ameur-b15aa0165) , [Houssem Meghnouj](https://www.linkedin.com/in/houssem-meghnoudj-229735148), [Nabil Tchoulak](https://www.linkedin.com/in/mohamed-nabil-tchoulak-b43670167) , [Merouane Guettache](https://www.linkedin.com/in/merouane-guettache-261560181/)
 
 **23 Mars 2019**: Submit the V1 code according to Alpha-Pilot deadline.
+**02 Avril 2019**: Resolve all submission issues.
 
 The aim of this code is to complete the selection of the Lockheed Martin's Drone Race "Alpha Pilot" (https://www.herox.com/alphapilot/78-test-3) but can be used for other drone race contests. 
 
