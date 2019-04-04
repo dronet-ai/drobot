@@ -53,7 +53,7 @@
        <arg name="node_start_delay_one" default="2.0" />  
        <node name="test_IMU" pkg="control" type="test_IMU.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay_one); $0 $@' " />
        <arg name="node_start_delay" default="10.0" />  
-       <node name="leaderboard" pkg="control" output="screen" type="leaderbord_groundtruth_v3.py" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " /> 
+       <node name="leaderboard" pkg="control" type="leaderbord_groundtruth_v3.py" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " /> 
    </group>
  </launch>
 

@@ -494,9 +494,9 @@ if __name__ == '__main__':
         x_s,y_s,z_s,q1,q2,q3,q4=uav_groundtruth_pose(trans,fused_transform)
         #z = Position.z
         #Frame transformation between SLAM and ground truth 
-        x=gt.transform.translation.x  #18-y_s
-        y=gt.transform.translation.y
-        z= gt.transform.translation.z
+        x=x_s*cos(Y_i) + y_s*sin(Y_i) + initial_pose[0]  #18-y_s
+        y=-x_s*sin(Y_i) + y_s*cos(Y_i) + initial_pose[1]   #-23 +x_s
+        z= initial_pose[2] + z_s -1    #5.3 + z_s
         print(Y_i)
 	########### transform tf to euler frame
         
