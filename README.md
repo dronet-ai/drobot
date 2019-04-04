@@ -4,6 +4,7 @@
 
 **23 Mars 2019**: Submit the V1 code according to Alpha-Pilot deadline.
 **02 Avril 2019**: Resolve all submission issues.
+**04 Avril 2019**: Resolve remaining issue.
 
 The aim of this code is to complete the selection of the Lockheed Martin's Drone Race "Alpha Pilot" (https://www.herox.com/alphapilot/78-test-3) but can be used for other drone race contests. 
 
