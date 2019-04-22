@@ -10,7 +10,9 @@
 
 The aim of this code is to complete the selection of the Lockheed Martin's Drone Race "Alpha Pilot" (https://www.herox.com/alphapilot/78-test-3) but can be used for other drone race contests. 
 
-The Alpha Pilot qualification evaluates team's skills in both Control Engineering and Real-time programming, by controlling an autonomous drone on a provided simulator, [FlightGoggles](http://flightgoggles.mit.edu/) : 
+
+
+The Alpha Pilot qualification evaluates team's skills in both Control Engineering and Real-time programming, by controlling an autonomous drone on a provided simulator, [FlightGoggles](http://flightgoggles.mit.edu/) 
 
 ![](https://www.youtube.com/watch?v=e_3Yw0uPRKE)
 
@@ -54,6 +56,8 @@ rosrun flightgoggles scorer.sh
 
 * Position and Attitude controllers in [Controller.py](./catkin_ws/src/control/scripts/leaderbord_groundtruth_v3.py)
 * Position Estimation in [Stereo-SLAM.cpp](./catkin_ws/src/orb_slam_2_ros-master/ros/src/StereoNode.cc)
+
+Tools codes from : [Drobot-dev](https://github.com/Nabiltchoulak/Drobot-controller-files-)
 
 # Technical details
 
