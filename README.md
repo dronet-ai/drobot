@@ -8,6 +8,8 @@
 
 **04 Avril 2019**: Resolve remaining issue.
 
+**10 May 2019** : Adding technical report.
+
 The aim of this code is to complete the selection of the Lockheed Martin's Drone Race "Alpha Pilot" (https://www.herox.com/alphapilot/78-test-3) but can be used for other drone race contests. 
 
 
@@ -61,9 +63,16 @@ Tools codes from : [Drobot-dev](https://github.com/Nabiltchoulak/Drobot-controll
 
 # Technical details
 
-Incoming !
+Please read following article : [Fast and Furious Computation for Drone Navigation](./Fast%20and%20Furious%20Computation%20for%20Drone%20Navigation.pdf)
 
 # Related Publications
 
-Incoming !
+If you use of our code or our report in your project , please cite :
 
+     @article{Drobot,
+      title={{Drobot}: Fast and Furious Computation for Drone Navigation},
+      author={Zeryab Moussaoui and al.},
+      journal={Github},
+      year={2019}
+     }
+     
