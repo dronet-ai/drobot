@@ -10,6 +10,8 @@
 
 **10 May 2019** : Adding technical report.
 
+**26 June 2019** : Adding Simulation of control law
+
 The aim of this code is to complete the selection of the Lockheed Martin's Drone Race "Alpha Pilot" (https://www.herox.com/alphapilot/78-test-3) but can be used for other drone race contests. 
 
 
